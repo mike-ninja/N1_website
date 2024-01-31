@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { highlights } from "@/lib/const-data";
 import { FaLongArrowAltRight } from "react-icons/fa";
+
+export type HightlightType = typeof highlights[number];
 
 export default function Mission() {
   return (
@@ -36,6 +39,7 @@ function MissionText() {
     stiffness: 50,
     duration: 0.5,
   };
+
   return (
     <div>
       <motion.p
@@ -59,7 +63,7 @@ function MissionText() {
           delay: 0.4,
         }}
       >
-        <h2 className="section_heading">OUR MISSION</h2>
+        <h2 className="section_heading xl:mb-10">OUR MISSION</h2>
         <div className="flex flex-col gap-7">
           <p>
             We are a web agency based in Cairns, Australia. Our mission is to
@@ -79,7 +83,52 @@ function MissionText() {
             <FaLongArrowAltRight className="group-hover:translate-x-1 transition_config" />
           </Link>
         </div>
+        <div className="flex flex-col gap-7 mt-10">
+          {highlights.map((item, index) => (
+            <Fragment key={item.index}>
+              <Highlight {...item} />
+            </Fragment>
+          ))}
+        </div>
       </motion.div>
     </div>
+  );
+}
+
+function Highlight(highlight: HightlightType) {
+  const highlightMotion = {
+    hidden: {
+      height: 8,
+      transition: {
+        duration: 0.2,
+        type: "tween",
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      height: "auto",
+      transition: {
+        duration: 0.2,
+        type: "tween",
+        ease: "easeIn",
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      animate="hidden"
+      whileHover="hover"
+      className="group relative cursor-none flex pt-4"
+    >
+      <motion.div
+        variants={highlightMotion}
+        className="absolute top-0 left-0 w-full px-2 bg-pink-600 overflow-hidden group-hover:rounded-sm"
+      >
+        <p className="my-2">{highlight.description}</p>
+      </motion.div>
+      <h3 className="xl:text-3xl">{highlight.title}</h3>
+    </motion.div>
   );
 }

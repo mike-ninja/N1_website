@@ -1,11 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React, { Fragment } from "react";
 import { portfolio } from "@/lib/const-data";
 import { TbArrowBadgeRight } from "react-icons/tb";
-import Link from "next/link";
 
 export type PortfolioType = typeof portfolio[number];
 
