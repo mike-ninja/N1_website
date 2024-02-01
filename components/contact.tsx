@@ -5,16 +5,27 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { useFormStatus } from "react-dom";
+import { company } from "@/lib/const-data";
 import { GiSandsOfTime } from "react-icons/gi";
 import { sendEmail } from "@/actions/send-emails";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 export default function contact() {
   return (
-    <section>
+    <section className="mb-8">
       <div className="section_container grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative flex flex-col">
-          <h2 className="section_heading mb-10">CONTACT US</h2>
+          <h2 className="section_heading">CONTACT US</h2>
+          <p className="text-sm sm:text-base mb-6 xl:mb-10">
+            Please contact me direcly at{" "}
+            <a
+              href={`mailto:${company.email}`}
+              className="underline"
+            >
+              {company.email}
+            </a>{" "}
+            or through this form.
+          </p>
           <form
             action={async (formData) => {
               const { error } = await sendEmail(formData);
@@ -69,7 +80,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <div className="flex grow justify-center lg:justify-start items-center mt-4 mb-8">
+    <div className="flex grow justify-center lg:justify-start items-center lg:items-end mt-4">
       <button type="submit" disabled={pending} className="relative group">
         <Image
           src="/contact-text.svg"

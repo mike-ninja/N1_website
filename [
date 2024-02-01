@@ -1,0 +1,60 @@
+"use client";
+import React, { Fragment } from "react";
+import { motion } from "framer-motion";
+import { company, pricing } from "@/lib/const-data";
+
+type PriceType = typeof pricing[number] & { delay: number };
+
+export default function Pricing() {
+  return (
+    <section>
+      <div className="section_container">
+        <motion.p
+          initial={{ opacity: 0, translateX: 10 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            duration: 0.5,
+            delay: 0.2,
+          }}
+          className="text-pink-600"
+        >
+          Establish your website with {company.name}
+        </motion.p>
+        <h2 className="section_heading">PRICING</h2>
+        {pricing.map((pricing, index) => (
+          <Fragment key={index}>
+            <PricingCard {...{ ...pricing, delay: index + 1 }} />
+          </Fragment>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function PricingCard(price: PriceType) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, translateX: -10 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        type: "spring",
+        stiffness: 50,
+        duration: 0.5,
+        delay: price.delay * 0.2,
+      }}
+      className="border-4 border-transparent border-t-pink-600 grid grid-cols-3"
+    >
+      <h3>{price.title}</h3>
+      <ul>
+        {price.description.map((description, index) => (
+          <li key={index}>{description}</li>
+        ))}
+      </ul>
+      <h3 className="text-right">{price.price}</h3>
+    </motion.div>
+  );
+}

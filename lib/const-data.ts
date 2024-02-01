@@ -1,3 +1,9 @@
+export const company = {
+  name: "N1 Websites Agency",
+  email: "michelbarutel.work@hotmail.com",
+  phone: "+61 402 704 033",
+};
+
 export const highlights = [
   {
     title: "Tailored Solutions",
@@ -57,5 +63,43 @@ export const portfolio = [
     title: "Yoga Blog",
     link: "",
     image: "/portfolio-image-three.webp",
+  },
+] as const;
+
+export const pricing = [
+  {
+    title: "/Landing Page",
+    description: [
+      "Single page website",
+    ],
+    price: "AU$250",
+  },
+  {
+    title: "/Multi Page",
+    description: [
+      "Multiple page website",
+    ],
+    price: "AU$500",
+  },
+  {
+    title: "/Express Design",
+    description: [
+      "One page website designed in 3 days",
+    ],
+    price: "AU$600",
+  },
+  {
+    title: "/Brand Identity",
+    description: [
+      "Brand Development",
+    ],
+    price: "AU$200",
+  },
+  {
+    title: "/Dynamic Content",
+    description: [
+      "Dynamic Content via Contentful",
+    ],
+    price: "AU$1500",
   },
 ] as const;

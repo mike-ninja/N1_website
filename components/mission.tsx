@@ -1,10 +1,10 @@
 "use client";
 
-import React, { Fragment } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { highlights } from "@/lib/const-data";
+import { company, highlights } from "@/lib/const-data";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 export type HightlightType = typeof highlights[number];
@@ -47,7 +47,7 @@ function MissionText() {
       viewport={{ once: true }}
       transition={{
         ...transition,
-        delay: 0.4,
+        delay: 0.6,
       }}
       className="flex flex-col justify-center"
     >
@@ -62,7 +62,7 @@ function MissionText() {
           professional websites for your business.
         </p>
         <p>
-          N1 Website Agency is with you every step of the way - from briefing &
+          {company.name} is with you every step of the way - from briefing &
           prototyping to publishing & maintenance with the ultimate goal of
           boosting your website to be <span className="italic">Number 1!</span>
         </p>
@@ -77,59 +77,3 @@ function MissionText() {
     </motion.div>
   );
 }
-
-// <div className="flex flex-col gap-7 mt-10">
-//   {highlights.map((item, index) => (
-//     <Fragment key={index}>
-//       <Highlight {...item} />
-//     </Fragment>
-//   ))}
-// </div>
-// function Highlight(highlight: HightlightType) {
-//   const highlightMotion = {
-//     hidden: {
-//       height: 8,
-//       transition: {
-//         duration: 0.2,
-//         ease: "easeOut",
-//       },
-//     },
-//     hover: {
-//       height: "auto",
-//       transition: {
-//         duration: 0.2,
-//         ease: "easeIn",
-//       },
-//     },
-//   };
-//
-//   return (
-//     <motion.div
-//       initial="hidden"
-//       animate="hidden"
-//       whileHover="hover"
-//       className="group relative cursor-none flex pt-4"
-//     >
-//       <motion.div
-//         variants={highlightMotion}
-//         className="absolute top-0 left-0 w-full px-2 bg-pink-600 overflow-hidden group-hover:rounded-sm"
-//       >
-//         <p className="my-2">{highlight.description}</p>
-//       </motion.div>
-//       <h3 className="xl:text-3xl">{highlight.title}</h3>
-//     </motion.div>
-//   );
-// }
-
-// <motion.p
-//   initial={{ opacity: 0, translateX: 10 }}
-//   whileInView={{ opacity: 1, translateX: 0 }}
-//   viewport={{ once: true }}
-//   transition={{
-//     ...transition,
-//     delay: 0.2,
-//   }}
-//   className="text-pink-600 mb-10"
-// >
-//   Establish your website with N1 Website Agency
-// </motion.p>

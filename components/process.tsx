@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React, { Fragment } from "react";
-import { process } from "@/lib/const-data";
+import { company, process } from "@/lib/const-data";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
-export type ProcessType = typeof process[number];
+type ProcessType = typeof process[number];
 
 export default function Process() {
   return (
@@ -26,7 +26,8 @@ export default function Process() {
         >
           <h2 className="section_heading lg:text-5xl">PROCESS</h2>
           <p className="text-sm xl:text-base">
-            At N1 Agency, we code unique websites via modern practices for the
+            At{" "}
+            {company.name}, we code unique websites via modern practices for the
             best user experience & search engine results. We are independent
             from website builder platforms that requires huge recurring fees,
             therefore, you only pay us once for the delivery of your website.

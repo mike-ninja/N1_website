@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import React, { Fragment } from "react";
 import { portfolio } from "@/lib/const-data";
 
-export type PortfolioType = typeof portfolio[number];
+type PortfolioType = typeof portfolio[number];
 
 export default function Portfolio() {
   return (
-    <section className="pb-10 lg:pb-16">
+    <section>
       <div className="section_container flex flex-col">
         <h2 className="section_heading mb-5 md:mb-7 lg:mb-9 xl:mb-14 2xl:mb-16 z-40">PORTFOLIO</h2>
         <div className="relative grid grid-cols-1 md:gap-2 lg:gap-3 cursor-pointer">
@@ -89,7 +89,7 @@ function PortfolioItem(portfolio: PortfolioType) {
             <h2 className="text-4xl md:text-5xl xl:text-6xl uppercase tracking-tight group-hover:text-pink-600 transition_config cursor-default">
               {portfolio.title}
             </h2>
-            <h3 className="italic text-3xl group-hover:text-pink-600 text-right">
+            <h3 className="italic text-lg md:text-3xl group-hover:text-pink-600 text-right">
               Coming Soon
             </h3>
           </div>
