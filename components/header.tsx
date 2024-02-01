@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { IoMdArrowRoundDown } from "react-icons/io";
 
 export default function Header() {
   return (
@@ -30,7 +31,7 @@ function Heading() {
         }}
       >
         <p className="text-gray-300">
-          designing & coding professional websites
+          Designing & coding professional websites
         </p>
         <h1 className="text-7xl lg:text-8xl xl:text-9xl tracking-tight my-7">
           LET US CREATE A<br />WEBSITE FOR <br />YOUR BUSINESS
@@ -59,15 +60,23 @@ function Heading() {
 
 function CallToAction() {
   return (
-    <div className="absolute bottom-16 right-5">
-      <Image
-        src="/call-to-action-text.svg"
-        alt="call to action"
-        height={200}
-        width={200}
-        className="animate-[spin_10s_linear_infinite]"
-      />
-    </div>
+    <motion.div
+      initial={{ opacity: 0, translateX: 10 }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{ type: "spring", stiffness: 50, duration: 3, delay: 0.5 }}
+      className="absolute bottom-16 right-5"
+    >
+      <div className="relative">
+        <Image
+          src="/header-text.svg"
+          alt="call to action"
+          height={200}
+          width={200}
+          className="animate-[spin_10s_linear_infinite]"
+        />
+        <IoMdArrowRoundDown className="text-8xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      </div>
+    </motion.div>
   );
 }
 

@@ -1,4 +1,4 @@
-import { Header, Mission, Portfolio, Process } from "@/components";
+import { Header, Mission, Portfolio, Process, Contact } from "@/components";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Mission />
       <Process />
       <Portfolio />
+      <Contact />
     </main>
   );
 }

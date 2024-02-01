@@ -52,7 +52,7 @@ function MissionText() {
         }}
         className="text-pink-600 mb-10"
       >
-        Design your website with (M) Studio
+        Establish your website with N1 Website Agency
       </motion.p>
       <motion.div
         initial={{ opacity: 0, translateY: -10 }}
@@ -72,8 +72,10 @@ function MissionText() {
             and code professional websites for your business.
           </p>
           <p>
-            (M) Studio is with you every step of the way - from briefing &
-            prototyping to publishing & maintenance.
+            N1 Website Agency is with you every step of the way - from briefing
+            & prototyping to publishing & maintenance with the ultimate goal of
+            boosting your website to be{" "}
+            <span className="italic">Number 1!</span>
           </p>
           <Link
             href="/contact"
@@ -85,7 +87,7 @@ function MissionText() {
         </div>
         <div className="flex flex-col gap-7 mt-10">
           {highlights.map((item, index) => (
-            <Fragment key={item.index}>
+            <Fragment key={index}>
               <Highlight {...item} />
             </Fragment>
           ))}
@@ -101,7 +103,6 @@ function Highlight(highlight: HightlightType) {
       height: 8,
       transition: {
         duration: 0.2,
-        type: "tween",
         ease: "easeOut",
       },
     },
@@ -109,7 +110,6 @@ function Highlight(highlight: HightlightType) {
       height: "auto",
       transition: {
         duration: 0.2,
-        type: "tween",
         ease: "easeIn",
       },
     },

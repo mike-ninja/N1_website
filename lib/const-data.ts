@@ -46,7 +46,7 @@ export const portfolio = [
   {
     title: "Hair Studio",
     link: "https://astudiolarnaca.com/",
-    image: "/portfolio-image.webp",
+    image: "/portfolio-image-one.webp",
   },
   {
     title: "Conference Business",
@@ -54,8 +54,8 @@ export const portfolio = [
     image: "/portfolio-image-two.webp",
   },
   {
-    title: "Yoga Studio",
-    link: "https://icsconferences.com",
-    image: "/mission-image.webp",
+    title: "Yoga Blog",
+    link: "",
+    image: "/portfolio-image-three.webp",
   },
 ] as const;
