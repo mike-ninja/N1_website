@@ -6,9 +6,8 @@ export default function Home() {
       <Header />
       <Mission />
       <Process />
+      <Portfolio />
+      <Contact />
     </main>
   );
 }
-//     <Process />
-//     <Portfolio />
-//       <Contact />

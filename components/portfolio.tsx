@@ -10,9 +10,9 @@ export type PortfolioType = typeof portfolio[number];
 
 export default function Portfolio() {
   return (
-    <section className="py-24 flex justify-center items-center">
-      <div className="section_container">
-        <div className="relative grid grid-cols-1 gap-8 cursor-pointer">
+    <section>
+      <div className="section_container flex flex-col">
+        <div className="relative grid grid-cols-1 gap-4 cursor-pointer">
           {portfolio.map((item, index) => (
             <Fragment key={index}>
               <PortfolioItem {...item} />
@@ -23,7 +23,7 @@ export default function Portfolio() {
           initial={{ opacity: 0, translateX: -100 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           viewport={{ once: true }}
-          className="text-4xl italic font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config text-right mt-24"
+          className="text-2xl lg:text-4xl italic font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config text-right z-40 mt-8 sm:mt-12"
         >
           Your Website Is Next
         </motion.h2>
@@ -59,9 +59,9 @@ function PortfolioItem(portfolio: PortfolioType) {
     >
       <motion.div
         variants={imageMotion}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute top-1/2 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-0 -translate-y-1/2"
       >
-        <div className="h-[450px] w-[800px] relative">
+        <div className="hidden sm:block h-[450px] sm:w-[620px] md:w-[700px] lg:w-[800px] relative">
           <Image
             fill
             src={portfolio.image}
@@ -78,14 +78,14 @@ function PortfolioItem(portfolio: PortfolioType) {
             rel="noreferrer"
             className="z-40"
           >
-            <h2 className="text-7xl font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config">
               {portfolio.title}
             </h2>
           </Link>
         )
         : (
           <div className="z-40">
-            <h2 className="text-7xl font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config cursor-default text-right">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config cursor-default">
               {portfolio.title}
             </h2>
             <h3 className="italic text-3xl group-hover:text-pink-600 text-right">
