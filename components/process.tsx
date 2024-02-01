@@ -22,10 +22,10 @@ export default function Process() {
             duration: 0.5,
             delay: 0.2,
           }}
-          className="grid grid-cols-1 gap-3 sm:gap-0 sm:grid-cols-2 mb-10"
+          className="grid grid-cols-1 gap-3 lg:gap-0 lg:grid-cols-2 mb-10"
         >
-          <h2 className="text-5xl">PROCESS</h2>
-          <p>
+          <h2 className="section_heading lg:text-5xl">PROCESS</h2>
+          <p className="text-sm xl:text-base">
             At N1 Agency, we code unique websites via modern practices for the
             best user experience & search engine results. We are independent
             from website builder platforms that requires huge recurring fees,

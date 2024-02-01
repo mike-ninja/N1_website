@@ -10,9 +10,10 @@ export type PortfolioType = typeof portfolio[number];
 
 export default function Portfolio() {
   return (
-    <section>
+    <section className="pb-10 lg:pb-16">
       <div className="section_container flex flex-col">
-        <div className="relative grid grid-cols-1 gap-4 cursor-pointer">
+        <h2 className="section_heading mb-5 md:mb-7 lg:mb-9 xl:mb-14 2xl:mb-16 z-40">PORTFOLIO</h2>
+        <div className="relative grid grid-cols-1 md:gap-2 lg:gap-3 cursor-pointer">
           {portfolio.map((item, index) => (
             <Fragment key={index}>
               <PortfolioItem {...item} />
@@ -61,7 +62,7 @@ function PortfolioItem(portfolio: PortfolioType) {
         variants={imageMotion}
         className="absolute top-1/2 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-0 -translate-y-1/2"
       >
-        <div className="hidden sm:block h-[450px] sm:w-[620px] md:w-[700px] lg:w-[800px] relative">
+        <div className="hidden sm:block h-[320px] md:h-[370px] lg:h-[430px] xl:h-[500px] sm:w-[620px] md:w-[700px] lg:w-[800px] relative">
           <Image
             fill
             src={portfolio.image}
@@ -78,14 +79,14 @@ function PortfolioItem(portfolio: PortfolioType) {
             rel="noreferrer"
             className="z-40"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config">
+            <h2 className="text-4xl md:text-5xl xl:text-6xl uppercase tracking-tight group-hover:text-pink-600 transition_config">
               {portfolio.title}
             </h2>
           </Link>
         )
         : (
           <div className="z-40">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config cursor-default">
+            <h2 className="text-4xl md:text-5xl xl:text-6xl uppercase tracking-tight group-hover:text-pink-600 transition_config cursor-default">
               {portfolio.title}
             </h2>
             <h3 className="italic text-3xl group-hover:text-pink-600 text-right">

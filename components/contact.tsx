@@ -12,9 +12,9 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 export default function contact() {
   return (
     <section>
-      <div className="section_container grid grid-cols-2 gap-10 h-[600px]">
+      <div className="section_container grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative flex flex-col">
-          <h2 className="section_heading xl:mb-10">CONTACT US</h2>
+          <h2 className="section_heading mb-10">CONTACT US</h2>
           <form
             action={async (formData) => {
               const { error } = await sendEmail(formData);
@@ -52,7 +52,7 @@ export default function contact() {
             <SubmitButton />
           </form>
         </div>
-        <div className="relative h-full">
+        <div className="hidden lg:block relative h-full">
           <Image
             src="/contact-image.webp"
             alt="Cairns Web Agency"
@@ -69,7 +69,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <div className="flex grow items-end mt-8">
+    <div className="flex grow justify-center lg:justify-start items-center mt-4 mb-8">
       <button type="submit" disabled={pending} className="relative group">
         <Image
           src="/contact-text.svg"
