@@ -7,7 +7,7 @@ import { IoMdArrowRoundDown } from "react-icons/io";
 
 export default function Header() {
   return (
-    <header className="relative h-screen flex">
+    <header className="relative h-[550px] sm:h-[500px] md:h-[650px] lg:h-[800px] xl:h-[900px] 2xl:h-screen flex overflow-hidden">
       <div className="section_container relative z-10">
         <Heading />
         <CallToAction />
@@ -19,7 +19,7 @@ export default function Header() {
 
 function Heading() {
   return (
-    <div className="absolute top-1/4 left-0">
+    <>
       <motion.div
         initial={{ opacity: 0, translateY: -10 }}
         animate={{ opacity: 1, translateY: 0 }}
@@ -29,12 +29,13 @@ function Heading() {
           duration: 1.5,
           delay: 0.1,
         }}
+        className="absolute top-10 md:top-24 -translate-y-1/2 left-2"
       >
-        <p className="text-gray-300">
+        <p className="text-pink-300 italic xl:text-lg">
           Designing & coding professional websites
         </p>
-        <h1 className="text-7xl lg:text-8xl xl:text-9xl tracking-tight my-7">
-          LET US CREATE A<br />WEBSITE FOR <br />YOUR BUSINESS
+        <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight my-7 drop-shadow-md">
+          LET US CREATE A <br className="hidden" />WEBSITE FOR <br className="hidden" />YOUR BUSINESS
         </h1>
       </motion.div>
       <motion.div
@@ -46,15 +47,17 @@ function Heading() {
           duration: 3,
           delay: 0.5,
         }}
-        className="grid grid-cols-2 gap-x-16 w-fit"
+        className="absolute bottom-5 md:bottom-16 lg:bottom-32 left-2 grid grid-cols-2 gap-x-16 w-fit xl:text-lg"
       >
         <p>Based in Cairns, Australia</p>
-        <p className="col-start-2">Designing</p>
-        <p className="col-start-2">Publishing</p>
-        <p className="col-start-2">SEO Optimization</p>
-        <p className="col-start-2">Maintenance</p>
+        <div>
+          <p>Designing</p>
+          <p>Publishing</p>
+          <p>SEO Optimization</p>
+          <p>Maintenance</p>
+        </div>
       </motion.div>
-    </div>
+    </>
   );
 }
 
@@ -63,8 +66,8 @@ function CallToAction() {
     <motion.div
       initial={{ opacity: 0, translateX: 10 }}
       animate={{ opacity: 1, translateX: 0 }}
-      transition={{ type: "spring", stiffness: 50, duration: 3, delay: 0.5 }}
-      className="absolute bottom-16 right-5"
+      transition={{ type: "spring", stiffness: 50, duration: 3, delay: 1 }}
+      className="hidden md:block absolute bottom-16 right-5"
     >
       <div className="relative">
         <Image
@@ -86,7 +89,7 @@ function BackgroundImage() {
       fill
       src="/header-bg.webp"
       alt="header background"
-      className="object-cover saturate-50 z-0"
+      className="object-cover blur-sm z-0"
     />
   );
 }

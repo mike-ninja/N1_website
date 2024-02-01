@@ -31,7 +31,7 @@ body {
 }
 
 section {
-  @apply py-10;
+  @apply pt-10 lg:pt-16;
 }
 
 .section_container {
@@ -39,7 +39,7 @@ section {
 }
 
 .section_heading {
-  @apply text-8xl font-medium tracking-tight;
+  @apply text-5xl md:text-6xl xl:text-8xl font-medium tracking-tight;
 }
 
 .transition_config {

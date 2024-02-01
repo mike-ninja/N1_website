@@ -22,9 +22,9 @@ export default function Process() {
             duration: 0.5,
             delay: 0.2,
           }}
-          className="grid grid-cols-2 mb-10"
+          className="grid grid-cols-1 gap-3 sm:gap-0 sm:grid-cols-2 mb-10"
         >
-          <h2 className="xl:text-5xl">PROCESS</h2>
+          <h2 className="text-5xl">PROCESS</h2>
           <p>
             At N1 Agency, we code unique websites via modern practices for the
             best user experience & search engine results. We are independent
@@ -32,7 +32,7 @@ export default function Process() {
             therefore, you only pay us once for the delivery of your website.
           </p>
         </motion.div>
-        <div className="relative grid grid-cols-3 gap-5">
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5">
           {process.map((process, index) => (
             <Fragment key={index}>
               <ProcessCard {...{ ...process, delay: index + 1 }} />
@@ -48,9 +48,9 @@ export default function Process() {
               duration: 0.5,
               delay: 0.5,
             }}
-            className="absolute top-1/3 left-1/3 z-10"
+            className="absolute top-1/3 left-1/3 z-10 hidden lg:block"
           >
-            <IoMdArrowRoundForward className="text-9xl text-pink-600 -translate-x-1/2" />
+            <IoMdArrowRoundForward className="text-7xl xl:text-8xl 2xl:text-9xl text-pink-600 -translate-y-1/2 -translate-x-1/2" />
           </motion.span>
           <motion.span
             initial={{ opacity: 0, translateX: -10 }}
@@ -62,9 +62,9 @@ export default function Process() {
               duration: 0.5,
               delay: 0.5,
             }}
-            className="absolute top-1/3 left-2/3 z-10"
+            className="absolute top-1/3 left-2/3 z-10 hidden lg:block"
           >
-            <IoMdArrowRoundForward className="text-9xl text-pink-600 -translate-x-1/2" />
+            <IoMdArrowRoundForward className="text-7xl xl:text-8xl 2xl:text-9xl  text-pink-600 -translate-y-1/2 -translate-x-1/2" />
           </motion.span>
         </div>
       </div>
@@ -86,7 +86,7 @@ function ProcessCard(
         duration: 0.5,
         delay: process.delay * 0.2,
       }}
-      className="relative group flex flex-col items-center min-h-[500px] rounded-lg overflow-hidden"
+      className="relative group flex flex-col justify-center md:justify-start items-center min-h-[270px] lg:min-h-[330px] xl:min-h-[400px] rounded-lg xl:pt-6 overflow-hidden cursor-default"
     >
       <Image
         fill
@@ -94,15 +94,15 @@ function ProcessCard(
         alt="Website Designer Cairns"
         className="object-cover blur-sm saturate-50 opacity-0 group-hover:opacity-100 transition_config !duration-500"
       />
-      <h3 className="text-pink-600 xl:text-[10rem] z-10 font-medium drop-shadow-2xl shadow-cyan-50">
+      <h3 className="text-pink-600 text-9xl xl:text-[10rem] z-10 font-medium drop-shadow-2xl shadow-cyan-50">
         {process.step}
       </h3>
-      <h4 className="-mt-5 mb-4 xl:text-4xl z-10 font-medium">
+      <h4 className="mb-4 text-3xl xl:text-4xl z-10 font-medium">
         {process.title}
       </h4>
       <ul className="z-10">
         {process.steps.map((process, index) => (
-          <li key={index} className="text-center text-lg">{process}</li>
+          <li key={index} className="text-center xl:text-lg">{process}</li>
         ))}
       </ul>
     </motion.div>
