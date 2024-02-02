@@ -6,8 +6,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "N1 Website Agency",
-  description: "Website agency in Cairns",
+  title: "N1 | Website Agency",
+  description: "Website agency for small Australian businesses",
 };
 
 export default function RootLayout({
