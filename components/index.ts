@@ -5,6 +5,7 @@ import Process from "./process";
 import Portfolio from "./portfolio";
 import Highlights from "./highlights";
 import Pricing from "./pricing";
+import Footer from "./footer";
 
 export {
   Contact,
@@ -14,4 +15,5 @@ export {
   Portfolio,
   Process,
   Pricing,
+  Footer
 };

@@ -1,5 +1,6 @@
 import {
   Contact,
+  Footer,
   Header,
   Highlights,
   Mission,
@@ -18,6 +19,7 @@ export default function Home() {
       <Portfolio />
       <Pricing />
       <Contact />
+      <Footer />
     </main>
   );
 }
