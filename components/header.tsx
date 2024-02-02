@@ -47,7 +47,7 @@ function Heading() {
           duration: 3,
           delay: 0.5,
         }}
-        className="absolute bottom-5 md:bottom-16 lg:bottom-32 left-2 grid grid-cols-2 gap-x-16 w-fit xl:text-lg"
+        className="absolute bottom-5 md:bottom-16 lg:bottom-32 left-4 grid grid-cols-2 gap-x-16 w-fit xl:text-lg"
       >
         <p>Based in Cairns, Australia</p>
         <div>

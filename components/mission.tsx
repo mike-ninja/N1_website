@@ -51,10 +51,10 @@ function MissionText() {
       }}
       className="flex flex-col justify-center"
     >
-      <h2 className="section_heading sm:mb-2 md:mb-4 lg:mb-6">
+      <h2 className="section_heading">
         OUR MISSION
       </h2>
-      <div className="flex flex-col gap-7">
+      <div className="flex flex-col gap-3 lg:gap-7">
         <p>
           We are a web agency based in Cairns, Australia. Our mission is to help
           small businesses gain a competitive advantage in the digital world by
@@ -62,13 +62,14 @@ function MissionText() {
           professional websites for your business.
         </p>
         <p>
-          {company.name} is with you every step of the way - from briefing &
-          prototyping to publishing & maintenance with the ultimate goal of
-          boosting your website to be <span className="italic">Number 1!</span>
+          {company.name}{" "}
+          is with you every step of the way - from briefing & prototyping to
+          publishing & maintenance with the ultimate goal of boosting your
+          website to be <span className="italic">Number 1!</span>
         </p>
         <Link
           href="/contact"
-          className="flex items-center gap-1 underline group"
+          className="flex items-center gap-1 underline flex-wrap"
         >
           Contact us today to book a free consultation!{" "}
           <FaLongArrowAltRight className="group-hover:translate-x-1 transition_config" />

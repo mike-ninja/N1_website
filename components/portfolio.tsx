@@ -12,7 +12,7 @@ export default function Portfolio() {
   return (
     <section>
       <div className="section_container flex flex-col">
-        <h2 className="section_heading mb-5 md:mb-7 lg:mb-9 xl:mb-14 2xl:mb-16 z-40">
+        <h2 className="section_heading z-40">
           PORTFOLIO
         </h2>
         <div className="relative grid grid-cols-1 gap-3 cursor-pointer">

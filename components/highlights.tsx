@@ -21,7 +21,7 @@ export default function Highlights() {
 
 function KeyWords() {
   return (
-    <div className="flex flex-col overflow-hidden text-nowrap text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+    <div className="flex flex-col overflow-hidden text-nowrap text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
       <motion.div
         initial={{ opacity: 0, translateX: -50 }}
         whileInView={{ opacity: 1, translateX: 0 }}
@@ -60,7 +60,7 @@ function KeyWords() {
 
 function HighlightLines() {
   return (
-    <div className="flex flex-col gap-7 mt-10">
+    <div className="flex flex-col gap-4 md:gap-7 mt-5 sm:mt-10">
       {highlights.map((item, index) => (
         <div key={index} className="relative">
           <HighlightLine {...item} />
@@ -89,7 +89,13 @@ function HighlightLine(highlight: HighlightLine) {
   };
 
   return (
-    <div onClick={() => handleOpen(open)} className="cursor-pointer">
+    <motion.div
+      initial={{ opacity: 0, translateX: 20 }}
+      whileInView={{ opacity: 1, translateX: 0 }}
+      viewport={{ once: true }}
+      onClick={() => handleOpen(open)}
+      className="cursor-pointer"
+    >
       <h3 className="text-2xl md:text-3xl lg:text-4xl">{highlight.title}</h3>
       <button
         type="button"
@@ -117,6 +123,6 @@ function HighlightLine(highlight: HighlightLine) {
           </motion.p>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }

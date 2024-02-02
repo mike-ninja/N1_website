@@ -22,7 +22,7 @@ export default function Process() {
             duration: 0.5,
             delay: 0.2,
           }}
-          className="grid grid-cols-1 gap-3 lg:gap-0 lg:grid-cols-2 mb-10"
+          className="grid grid-cols-1 lg:grid-cols-2"
         >
           <h2 className="section_heading lg:text-5xl">PROCESS</h2>
           <p className="text-sm xl:text-base">
@@ -87,7 +87,7 @@ function ProcessCard(
         duration: 0.5,
         delay: process.delay * 0.2,
       }}
-      className="relative group flex w-2/3 mx-auto md:w-full flex-col justify-center md:justify-start items-center min-h-[270px] lg:min-h-[330px] xl:min-h-[400px] rounded-lg xl:pt-6 overflow-hidden cursor-default"
+      className="relative group flex w-2/3 even:ml-auto md:w-full flex-col justify-center md:justify-start items-center min-h-[270px] lg:min-h-[330px] xl:min-h-[400px] rounded-lg xl:pt-6 overflow-hidden cursor-default"
     >
       <Image
         fill

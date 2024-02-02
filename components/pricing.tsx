@@ -23,7 +23,7 @@ export default function Pricing() {
         >
           Establish your website with {company.name}
         </motion.p>
-        <h2 className="section_heading mb-3 sm:mb-10">PRICING</h2>
+        <h2 className="section_heading">PRICING</h2>
         <div className="flex flex-col gap-3">
           {pricing.map((pricing, index) => (
             <Fragment key={index}>

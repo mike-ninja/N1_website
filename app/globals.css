@@ -39,7 +39,7 @@ section {
 }
 
 .section_heading {
-  @apply text-5xl md:text-6xl xl:text-8xl font-medium tracking-tight;
+  @apply text-5xl md:text-6xl xl:text-8xl font-medium tracking-tight mb-3 lg:mb-4 xl:mb-5;
 }
 
 .transition_config {
