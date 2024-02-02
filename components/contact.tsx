@@ -12,7 +12,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 export default function contact() {
   return (
-    <section className="mb-8">
+    <section id="contact" className="mb-8">
       <div className="section_container grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative flex flex-col">
           <h2 className="section_heading">CONTACT US</h2>

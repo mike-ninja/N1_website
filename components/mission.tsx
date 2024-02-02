@@ -68,8 +68,8 @@ function MissionText() {
           website to be <span className="italic">Number 1!</span>
         </p>
         <Link
-          href="/contact"
-          className="flex items-center gap-1 underline flex-wrap"
+          href="#contact"
+          className="flex items-center group gap-1 underline flex-wrap"
         >
           Contact us today to book a free consultation!{" "}
           <FaLongArrowAltRight className="group-hover:translate-x-1 transition_config" />

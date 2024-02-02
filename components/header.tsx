@@ -88,7 +88,7 @@ function CallToAction() {
           width={200}
           className="animate-[spin_10s_linear_infinite]"
         />
-        <IoMdArrowRoundDown className="text-8xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <IoMdArrowRoundDown className="text-8xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-80 animate-pulse" />
       </div>
     </motion.div>
   );
