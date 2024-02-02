@@ -1,23 +1,19 @@
 "use client";
-import React, { Fragment } from "react";
-import { TfiLineDotted } from "react-icons/tfi";
-import { highlights } from "@/lib/const-data";
-import { motion } from "framer-motion";
 
-type HighlightType = typeof highlights[number];
+import { LuPlus } from "react-icons/lu";
+import React, { Fragment, useState } from "react";
+import { highlights } from "@/lib/const-data";
+import { TfiLineDotted } from "react-icons/tfi";
+import { AnimatePresence, motion } from "framer-motion";
+
+type HighlightLine = typeof highlights[number];
 
 export default function Highlights() {
   return (
     <section>
       <div className="section_container">
         <KeyWords />
-        <div className="flex flex-col gap-7 mt-10">
-          {highlights.map((item, index) => (
-            <Fragment key={index}>
-              <Highlight {...item} />
-            </Fragment>
-          ))}
-        </div>
+        <HighlightLines />
       </div>
     </section>
   );
@@ -62,40 +58,65 @@ function KeyWords() {
   );
 }
 
-function Highlight(highlight: HighlightType) {
-  const highlightMotion = {
-    hidden: {
-      height: 8,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut",
-      },
+function HighlightLines() {
+  return (
+    <div className="flex flex-col gap-7 mt-10">
+      {highlights.map((item, index) => (
+        <div key={index} className="relative">
+          <HighlightLine {...item} />
+          <hr className="border-2 border-pink-700 mt-2" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function HighlightLine(highlight: HighlightLine) {
+  const [open, setOpen] = useState<boolean>(false);
+  const variants = {
+    active: {
+      rotate: 45,
+      transition: { type: "spring", duration: 0.5 },
     },
-    hover: {
-      height: "auto",
-      transition: {
-        duration: 0.2,
-        ease: "easeIn",
-      },
+    inactive: {
+      rotate: 0,
+      transition: { type: "spring", duration: 0.5 },
     },
   };
 
+  const handleOpen = (prev: boolean) => {
+    setOpen(!prev);
+  };
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="hidden"
-      whileTap="hover"
-      whileFocus="hover"
-      whileHover="hover"
-      className="group relative cursor-none flex pt-4"
-    >
-      <motion.div
-        variants={highlightMotion}
-        className="absolute top-0 left-0 w-full px-2 bg-pink-600 overflow-hidden group-hover:rounded-sm flex justify-center items-center"
+    <div onClick={() => handleOpen(open)} className="cursor-pointer">
+      <h3 className="text-2xl md:text-3xl lg:text-4xl">{highlight.title}</h3>
+      <button
+        type="button"
+        onClick={() => handleOpen(open)}
+        className="absolute top-2 right-2"
       >
-        <p className="my-2 hidden group-hover:block">{highlight.description}</p>
-      </motion.div>
-      <h3 className="xl:text-3xl">{highlight.title}</h3>
-    </motion.div>
+        <motion.span
+          variants={variants}
+          initial="inactive"
+          animate={open ? "active" : "inactive"}
+          className="text-pink-700 text-2xl flex"
+        >
+          <LuPlus />
+        </motion.span>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.p
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="text-sm leading-tight md:mt-2"
+          >
+            {highlight.description}
+          </motion.p>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
