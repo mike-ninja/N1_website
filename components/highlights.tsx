@@ -25,13 +25,13 @@ export default function Highlights() {
 
 function KeyWords() {
   return (
-    <div className="flex flex-col overflow-hidden text-nowrap">
+    <div className="flex flex-col overflow-hidden text-nowrap text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
       <motion.div
         initial={{ opacity: 0, translateX: -50 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         viewport={{ once: true }}
         transition={{ ease: "easeOut", duration: 0.5, delay: 0.5 }}
-        className="flex flex-nowrap gap-5 items-center justify-end text-7xl"
+        className="flex flex-nowrap gap-5 items-center justify-end"
       >
         <span className="text-pink-600">
           <TfiLineDotted />
@@ -47,7 +47,7 @@ function KeyWords() {
         whileInView={{ opacity: 1, translateX: 0 }}
         viewport={{ once: true }}
         transition={{ ease: "easeOut", duration: 0.5, delay: 0.8 }}
-        className="flex flex-nowrap gap-5 items-center text-7xl"
+        className="flex flex-nowrap gap-5 items-center"
       >
         <h3>RESPONSIVE</h3>
         <span className="text-pink-600">
@@ -72,7 +72,7 @@ function Highlight(highlight: HighlightType) {
       },
     },
     hover: {
-      height: "100%",
+      height: "auto",
       transition: {
         duration: 0.2,
         ease: "easeIn",

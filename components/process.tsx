@@ -87,13 +87,13 @@ function ProcessCard(
         duration: 0.5,
         delay: process.delay * 0.2,
       }}
-      className="relative group flex flex-col justify-center md:justify-start items-center min-h-[270px] lg:min-h-[330px] xl:min-h-[400px] rounded-lg xl:pt-6 overflow-hidden cursor-default"
+      className="relative group flex w-2/3 mx-auto md:w-full flex-col justify-center md:justify-start items-center min-h-[270px] lg:min-h-[330px] xl:min-h-[400px] rounded-lg xl:pt-6 overflow-hidden cursor-default"
     >
       <Image
         fill
         src="/process-bg.webp"
         alt="Website Designer Cairns"
-        className="object-cover blur-sm saturate-50 opacity-0 group-hover:opacity-100 transition_config !duration-500"
+        className="object-cover blur-sm saturate-50 xl:opacity-0 group-hover:opacity-100 transition_config !duration-500"
       />
       <h3 className="text-pink-600 text-9xl xl:text-[10rem] z-10 font-medium drop-shadow-2xl shadow-cyan-50">
         {process.step}

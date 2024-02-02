@@ -12,8 +12,10 @@ export default function Portfolio() {
   return (
     <section>
       <div className="section_container flex flex-col">
-        <h2 className="section_heading mb-5 md:mb-7 lg:mb-9 xl:mb-14 2xl:mb-16 z-40">PORTFOLIO</h2>
-        <div className="relative grid grid-cols-1 md:gap-2 lg:gap-3 cursor-pointer">
+        <h2 className="section_heading mb-5 md:mb-7 lg:mb-9 xl:mb-14 2xl:mb-16 z-40">
+          PORTFOLIO
+        </h2>
+        <div className="relative grid grid-cols-1 gap-3 cursor-pointer">
           {portfolio.map((item, index) => (
             <Fragment key={index}>
               <PortfolioItem {...item} />
@@ -24,7 +26,7 @@ export default function Portfolio() {
           initial={{ opacity: 0, translateX: -100 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           viewport={{ once: true }}
-          className="text-2xl lg:text-4xl italic font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config text-right z-40 mt-8 sm:mt-12"
+          className="text-2xl lg:text-4xl italic font-normal uppercase tracking-tight group-hover:text-pink-600 transition_config text-right z-40 mt-5"
         >
           Your Website Is Next
         </motion.h2>
@@ -56,7 +58,7 @@ function PortfolioItem(portfolio: PortfolioType) {
       initial="hidden"
       animate="hidden"
       whileHover="hover"
-      className="group flex items-center"
+      className="group flex items-center even:ml-auto even:text-right lg:even:ml-0 lg:even:text-left"
     >
       <motion.div
         variants={imageMotion}
