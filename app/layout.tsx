@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth no-scrollbar">
+    <html lang="en" className="!scroll-smooth scrollbar-hide">
       <body className={inter.className}>
         {children}
         <Toaster position="top-right" />
