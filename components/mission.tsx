@@ -12,7 +12,7 @@ export type HightlightType = typeof highlights[number];
 export default function Mission() {
   return (
     <section>
-      <div className="section_container grid lg:grid-cols-2 lg:gap-5 xl:gap-10 2xl:gap-16">
+      <div className="section_container grid lg:grid-cols-2 gap-5 xl:gap-10 2xl:gap-16">
         <MissionImage />
         <MissionText />
       </div>
@@ -22,7 +22,7 @@ export default function Mission() {
 
 function MissionImage() {
   return (
-    <div className="relative h-[400px] xl:h-[600px] hidden lg:block">
+    <div className="relative h-[300px] md:h-[400px] xl:h-[600px] order-1 lg:order-none mt-14 lg:mt-0">
       <Image
         fill
         src="/mission-image.webp"

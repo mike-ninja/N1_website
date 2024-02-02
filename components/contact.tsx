@@ -10,21 +10,24 @@ import { GiSandsOfTime } from "react-icons/gi";
 import { sendEmail } from "@/actions/send-emails";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
-export default function contact() {
+export default function Contact() {
   return (
     <section id="contact" className="mb-8">
-      <div className="section_container grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="relative flex flex-col">
+      <div className="section_container grid grid-cols-1 lg:grid-cols-2 gap-10 xl:pt-24">
+        <div className="relative flex flex-col order-1 lg:order-none">
           <h2 className="section_heading">CONTACT US</h2>
           <p className="text-sm sm:text-base mb-2 sm:mb-3 md:mb-4 xl:mb-8">
-            Please contact me direcly at{" "}
+            Please contact N1 direcly at{" "}
             <a
               href={`mailto:${company.email}`}
-              className="underline"
+              className="underline text-pink-600 hover:text-white transition_config"
             >
               {company.email}
-            </a>{" "}
-            or through this form.
+            </a>
+            <br />
+            <span className="italic">
+              or through the form below:
+            </span>
           </p>
           <form
             action={async (formData) => {
@@ -57,13 +60,13 @@ export default function contact() {
               required
               name="message"
               maxLength={4000}
-              placeholder="Describe your project"
+              placeholder="Project description"
               className="input_field"
             />
             <SubmitButton />
           </form>
         </div>
-        <div className="hidden lg:block relative h-full">
+        <div className="relative h-[300px] md:h-[400px] lg:h-full">
           <Image
             src="/contact-image.webp"
             alt="Cairns Web Agency"
@@ -80,7 +83,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <div className="flex grow justify-center lg:justify-start items-center lg:items-end mt-4">
+    <div className="flex grow justify-center lg:justify-start items-center lg:items-end mt-8">
       <button type="submit" disabled={pending} className="relative group">
         <Image
           src="/contact-text.svg"

@@ -21,7 +21,7 @@ export const highlights = [
       "Our websites are crafted to be responsive, providing an optimal viewing and interaction experience across a wide range of devices, enhancing accessibility for your audience.",
   },
   {
-    title: "Support and Maintenance",
+    title: "Support & Maintenance",
     description:
       "Beyond the launch, we provide ongoing support and maintenance to ensure your website stays up-to-date, secure, and continues to meet your evolving business needs.",
   },
