@@ -60,7 +60,7 @@ function KeyWords() {
 
 function HighlightLines() {
   return (
-    <div className="flex flex-col gap-4 md:gap-7 mt-5 sm:mt-10">
+    <div className="flex flex-col gap-4 md:gap-7 mt-2 sm:mt-3 md:mt-4 xl:mt-8">
       {highlights.map((item, index) => (
         <div key={index} className="relative">
           <HighlightLine {...item} />

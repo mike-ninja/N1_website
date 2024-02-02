@@ -22,7 +22,7 @@ export default function Process() {
             duration: 0.5,
             delay: 0.2,
           }}
-          className="grid grid-cols-1 lg:grid-cols-2"
+          className="grid grid-cols-1 lg:grid-cols-2 heading_margin"
         >
           <h2 className="section_heading lg:text-5xl">PROCESS</h2>
           <p className="text-sm xl:text-base">

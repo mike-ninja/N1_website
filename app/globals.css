@@ -38,8 +38,12 @@ section {
   @apply container mx-auto px-4;
 }
 
+.heading_margin {
+  @apply mb-5 md:mb-7 xl:mb-8;
+}
+
 .section_heading {
-  @apply text-5xl md:text-6xl xl:text-8xl font-medium tracking-tight mb-3 lg:mb-4 xl:mb-5;
+  @apply text-5xl md:text-6xl xl:text-8xl font-medium tracking-tight heading_margin;
 }
 
 .transition_config {

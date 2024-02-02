@@ -16,7 +16,7 @@ export default function contact() {
       <div className="section_container grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative flex flex-col">
           <h2 className="section_heading">CONTACT US</h2>
-          <p className="text-sm sm:text-base mb-6 xl:mb-10">
+          <p className="text-sm sm:text-base mb-2 sm:mb-3 md:mb-4 xl:mb-8">
             Please contact me direcly at{" "}
             <a
               href={`mailto:${company.email}`}

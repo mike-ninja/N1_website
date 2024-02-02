@@ -17,6 +17,16 @@ export default function Header() {
   );
 }
 
+// function Logo() {
+//   return (
+//     <div className="absolute top-2 sm:top-5 right-3 sm:right-5 z-[999]">
+//       <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-tr from-pink-700 via-pink-600 to-pink-800 bg-clip-text text-transparent tracking-[-0.25rem] drop-shadow-xl opacity-90">
+//         N1
+//       </h1>
+//     </div>
+//   );
+// }
+
 function Heading() {
   return (
     <>
@@ -35,7 +45,8 @@ function Heading() {
           Designing & coding professional websites
         </p>
         <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl tracking-tight my-7 drop-shadow-md">
-          LET US CREATE A <br className="hidden" />WEBSITE FOR <br className="hidden" />YOUR BUSINESS
+          LET US CREATE A <br className="hidden" />WEBSITE FOR{" "}
+          <br className="hidden" />YOUR BUSINESS
         </h1>
       </motion.div>
       <motion.div
