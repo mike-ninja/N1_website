@@ -1,6 +1,6 @@
 export const company = {
   name: "N1 Website Agency",
-  email: "michelbarutel.work@hotmail.com",
+  email: "none.websites@gmail.com",
   phone: "+61 402 704 033",
 };
 

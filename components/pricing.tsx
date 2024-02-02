@@ -53,12 +53,14 @@ function PricingCard(price: PriceType) {
       <h3 className="text-2xl lg:text-3xl font-semibold">{price.title}</h3>
       <ul className="order-1 md:order-none pl-2 w-full lg:text-xl xl:text-2xl">
         {price.description.map((description, index) => (
-          <li key={index}>{description}</li>
+          <li key={index}>
+            <p className="lg:text-xl">{description}</p>
+          </li>
         ))}
       </ul>
-      <h3 className="text-pink-600 text-lg lg:text-xl text-bold ml-auto">
-        {price.price}
-      </h3>
+      <p className="text-pink-600 lg:text-xl text-bold ml-auto">
+        from {price.price}
+      </p>
     </motion.div>
   );
 }

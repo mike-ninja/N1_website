@@ -1,7 +1,7 @@
 "use client";
 
 import { LuPlus } from "react-icons/lu";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { highlights } from "@/lib/const-data";
 import { TfiLineDotted } from "react-icons/tfi";
 import { AnimatePresence, motion } from "framer-motion";
@@ -60,7 +60,7 @@ function KeyWords() {
 
 function HighlightLines() {
   return (
-    <div className="flex flex-col gap-4 md:gap-7 mt-2 sm:mt-3 md:mt-4 xl:mt-8">
+    <div className="flex flex-col gap-4 md:gap-7 mt-14 lg:mt-16 xl:mt-20 2xl:mt-24">
       {highlights.map((item, index) => (
         <div key={index} className="relative">
           <HighlightLine {...item} />
@@ -117,7 +117,7 @@ function HighlightLine(highlight: HighlightLine) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="text-sm leading-tight md:mt-2"
+            className="md:mt-2"
           >
             {highlight.description}
           </motion.p>

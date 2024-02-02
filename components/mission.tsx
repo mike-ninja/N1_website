@@ -69,7 +69,7 @@ function MissionText() {
         </p>
         <Link
           href="#contact"
-          className="flex items-center group gap-1 underline flex-wrap"
+          className="flex items-center group gap-1 underline flex-wrap text-sm sm:text-base"
         >
           Contact us today to book a free consultation!{" "}
           <FaLongArrowAltRight className="group-hover:translate-x-1 transition_config" />
